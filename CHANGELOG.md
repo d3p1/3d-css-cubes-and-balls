@@ -1,3 +1,10 @@
+# 1.0.0 (2024-09-16)
+
+
+### Features
+
+* init [[#1](https://github.com/d3p1/3d-css-cubes-and-balls/issues/1)] ([b3fd295](https://github.com/d3p1/3d-css-cubes-and-balls/commit/b3fd295f3f074d2fd0dc8b489aaff122349a776f))
+
 ## [1.3.1](https://github.com/d3p1/base-css-template/compare/v1.3.0...v1.3.1) (2024-08-24)
 
 
