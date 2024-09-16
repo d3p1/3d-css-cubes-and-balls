@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/d3p1/3d-css-cubes-and-balls/compare/v1.0.0...v1.1.0) (2024-09-16)
+
+
+### Bug Fixes
+
+* rename src folder to docs to use GitHub Pages [[#1](https://github.com/d3p1/3d-css-cubes-and-balls/issues/1)] ([2206846](https://github.com/d3p1/3d-css-cubes-and-balls/commit/220684659d3fbd13220258f97c602bb5006a2d3b))
+
+
+### Features
+
+* init cubes [[#1](https://github.com/d3p1/3d-css-cubes-and-balls/issues/1)] ([c43c2e5](https://github.com/d3p1/3d-css-cubes-and-balls/commit/c43c2e55673c5d2d517ea1d9deb2ae88422e72ce))
+
 # 1.0.0 (2024-09-16)
 
 
