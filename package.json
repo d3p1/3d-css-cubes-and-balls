@@ -1,0 +1,32 @@
+{
+  "name": "@d3p1/3d-css-cubes-and-balls",
+  "version": "0.0.0",
+  "description": "Balls inside cubes effect to improve my CSS skills",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format:code": "prettier --ignore-path .gitignore --check src",
+    "format:code:fix": "npm run format:code -- --write",
+    "refactor": "npm run format:code:fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3p1/3d-css-cubes-and-balls.git"
+  },
+  "keywords": [
+    "css",
+    "3d-css"
+  ],
+  "author": "C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d3p1/3d-css-cubes-and-balls/issues"
+  },
+  "homepage": "https://github.com/d3p1/3d-css-cubes-and-balls#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.0",
+    "@d3p1/commitlint-config": "^1.0.0",
+    "husky": "^8.0.3",
+    "prettier": "3.0.3"
+  }
+}
