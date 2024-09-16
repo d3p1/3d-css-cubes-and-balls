@@ -2,3 +2,114 @@
  * @description Styles
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
+:root {
+  --primary: hsl(0, 0%, 20%);
+}
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+  overflow: hidden;
+}
+
+.scene,
+.scene div {
+  transform-style: preserve-3d;
+}
+
+.scene {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 10px;
+  transform: rotateX(65deg) rotateZ(45deg);
+}
+
+.scene__cube {
+  --cube-side: 10em;
+  --cube-border-color: hsl(292, 59%, 53%);
+  --cube-border-size: 0.3em;
+  --cube-side-translation: calc(
+    (var(--cube-side) / 2) + var(--cube-border-size)
+  );
+  --cube-translation: calc(var(--cube-side) + var(--cube-border-size));
+}
+
+.scene__cube {
+  position: absolute;
+  width: var(--cube-side);
+  height: var(--cube-side);
+}
+
+.scene__cube-side {
+  position: absolute;
+  width: var(--cube-side);
+  height: var(--cube-side);
+  background: transparent;
+  border: var(--cube-border-size) solid var(--cube-border-color);
+}
+
+.scene__cube-side--front {
+  transform: rotateY(90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--back {
+  transform: rotateY(-90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--left {
+  transform: rotateX(-90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--right {
+  transform: rotateX(90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-ball {
+  width: var(--cube-side);
+  height: var(--cube-side);
+  transform: rotateX(90deg) rotateY(-45deg);
+  border-radius: 50%;
+}
+
+.scene__cube:nth-child(even) .scene__cube-ball {
+  background-color: hsl(192, 59%, 53%);
+}
+
+.scene__cube:nth-child(odd) .scene__cube-ball {
+  background-color: hsl(52, 85%, 57%);
+}
+
+.scene__cube--top-front-left {
+  transform: translateX(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--top-back-left {
+  transform: translateX(calc(var(--cube-translation) * -1))
+    translateY(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--top-back-right {
+  transform: translateY(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--bottom-front-left {
+  transform: translateZ(calc(var(--cube-translation) * -1))
+    translateX(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--bottom-back-left {
+  transform: translateZ(calc(var(--cube-translation) * -1))
+    translateX(calc(var(--cube-translation) * -1))
+    translateY(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--bottom-back-right {
+  transform: translateZ(calc(var(--cube-translation) * -1))
+    translateY(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--bottom-front-right {
+  transform: translateZ(calc(var(--cube-translation) * -1));
+}
