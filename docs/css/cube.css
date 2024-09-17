@@ -1,0 +1,181 @@
+/**
+ * @description Cube styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__cube {
+  --cube-side: 10em;
+  --cube-border-color: hsl(292, 59%, 53%);
+  --cube-border-size: 0.3em;
+  --cube-side-translation: calc(
+    (var(--cube-side) / 2) + var(--cube-border-size)
+  );
+  --cube-translation: calc(var(--cube-side) + var(--cube-border-size));
+}
+
+.scene__cube {
+  position: absolute;
+  width: var(--cube-side);
+  height: var(--cube-side);
+}
+
+.scene__cube-side {
+  position: absolute;
+  width: var(--cube-side);
+  height: var(--cube-side);
+  background: transparent;
+  border: var(--cube-border-size) solid var(--cube-border-color);
+}
+
+.scene__cube-side--front {
+  transform: rotateY(90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--back {
+  transform: rotateY(-90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--left {
+  transform: rotateX(-90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--right {
+  transform: rotateX(90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-ball {
+  position: relative;
+}
+
+.scene__cube-ball::before,
+.scene__cube-ball::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: var(--cube-side);
+  height: var(--cube-side);
+  border-radius: 50%;
+}
+
+.scene__cube-ball::before {
+  transform: rotateX(90deg) rotateY(-45deg);
+}
+
+.scene__cube-ball::after {
+  transform: rotateX(90deg) rotateY(45deg);
+}
+
+.scene__cube:nth-child(even) .scene__cube-ball::before,
+.scene__cube:nth-child(even) .scene__cube-ball::after {
+  background-color: hsl(192, 59%, 53%);
+}
+
+.scene__cube:nth-child(odd) .scene__cube-ball::before,
+.scene__cube:nth-child(odd) .scene__cube-ball::after {
+  background-color: hsl(52, 85%, 57%);
+}
+
+.scene__cube {
+  --cube-animation-timing-function: linear(
+    0 0%,
+    0.22 2.1%,
+    0.86 6.5%,
+    1.11 8.6%,
+    1.3 10.7%,
+    1.35 11.8%,
+    1.37 12.9%,
+    1.37 13.7%,
+    1.36 14.5%,
+    1.32 16.2%,
+    1.03 21.8%,
+    0.94 24%,
+    0.89 25.9%,
+    0.88 26.85%,
+    0.87 27.8%,
+    0.87 29.25%,
+    0.88 30.7%,
+    0.91 32.4%,
+    0.98 36.4%,
+    1.01 38.3%,
+    1.04 40.5%,
+    1.05 42.7%,
+    1.05 44.1%,
+    1.04 45.7%,
+    1 53.3%,
+    0.99 55.4%,
+    0.98 57.5%,
+    0.99 60.7%,
+    1 68.1%,
+    1.01 72.2%,
+    1 86.7%,
+    1 100%
+  );
+}
+
+.scene__cube--top-front-right {
+  animation: topFrontRightCubeTranslation 2s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-front-left {
+  transform: translateX(calc(var(--cube-translation) * -1));
+  animation: topFrontLeftCubeTranslation 2s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-back-left {
+  transform: translateX(calc(var(--cube-translation) * -1))
+    translateY(calc(var(--cube-translation) * -1));
+  animation: topBackLeftCubeTranslation 2s var(--cube-animation-timing-function)
+    infinite;
+}
+
+.scene__cube--top-back-right {
+  transform: translateY(calc(var(--cube-translation) * -1));
+  animation: topBackRightCubeTranslation 2s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--bottom-front-left {
+  transform: translateZ(calc(var(--cube-translation) * -1))
+    translateX(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--bottom-back-left {
+  transform: translateZ(calc(var(--cube-translation) * -1))
+    translateX(calc(var(--cube-translation) * -1))
+    translateY(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--bottom-back-right {
+  transform: translateZ(calc(var(--cube-translation) * -1))
+    translateY(calc(var(--cube-translation) * -1));
+}
+
+.scene__cube--bottom-front-right {
+  transform: translateZ(calc(var(--cube-translation) * -1));
+}
+
+@keyframes topFrontRightCubeTranslation {
+  to {
+    transform: translateX(calc(var(--cube-translation) * -1));
+  }
+}
+
+@keyframes topFrontLeftCubeTranslation {
+  to {
+    transform: translateX(calc(var(--cube-translation) * -1))
+      translateY(calc(var(--cube-translation) * -1));
+  }
+}
+
+@keyframes topBackLeftCubeTranslation {
+  to {
+    transform: translateY(calc(var(--cube-translation) * -1));
+  }
+}
+
+@keyframes topBackRightCubeTranslation {
+  to {
+    transform: translate(0);
+  }
+}
