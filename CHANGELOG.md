@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/d3p1/3d-css-cubes-and-balls/compare/v1.1.0...v1.2.0) (2024-09-17)
+
+
+### Features
+
+* init basic animation [[#1](https://github.com/d3p1/3d-css-cubes-and-balls/issues/1)] ([49489b1](https://github.com/d3p1/3d-css-cubes-and-balls/commit/49489b1f844c13bf29c350fdb2a554a4b019e68d))
+
 # [1.1.0](https://github.com/d3p1/3d-css-cubes-and-balls/compare/v1.0.0...v1.1.0) (2024-09-16)
 
 

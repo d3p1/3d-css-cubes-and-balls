@@ -1,6 +1,6 @@
 {
   "name": "@d3p1/3d-css-cubes-and-balls",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Balls inside cubes effect to improve my CSS skills",
   "private": true,
   "type": "module",
