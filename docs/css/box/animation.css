@@ -40,88 +40,88 @@
 }
 
 .scene__cube--top-front-right {
-  animation: topFrontRightCubeHorizontalRotation 5s
-    var(--cube-animation-timing-function) infinite;
+  animation: topFrontRightCubeRotation 5s var(--cube-animation-timing-function)
+    infinite;
 }
 
 .scene__cube--top-front-right .scene__cube-ball {
-  animation: topFrontRightCubeBallHorizontalRotation 5s
+  animation: topFrontRightCubeBallRotation 5s
     var(--cube-animation-timing-function) infinite;
 }
 
 .scene__cube--top-front-left {
-  animation: topFrontLeftCubeHorizontalRotation 5s
-    var(--cube-animation-timing-function) infinite;
+  animation: topFrontLeftCubeRotation 5s var(--cube-animation-timing-function)
+    infinite;
 }
 
 .scene__cube--top-front-left .scene__cube-ball {
-  animation: topFrontLeftCubeBallHorizontalRotation 5s
+  animation: topFrontLeftCubeBallRotation 5s
     var(--cube-animation-timing-function) infinite;
 }
 
 .scene__cube--top-back-left {
-  animation: topBackLeftCubeHorizontalRotation 5s
-    var(--cube-animation-timing-function) infinite;
+  animation: topBackLeftCubeRotation 5s var(--cube-animation-timing-function)
+    infinite;
 }
 
 .scene__cube--top-back-left .scene__cube-ball {
-  animation: topBackLeftCubeBallHorizontalRotation 5s
+  animation: topBackLeftCubeBallRotation 5s
     var(--cube-animation-timing-function) infinite;
 }
 
 .scene__cube--top-back-right {
-  animation: topBackRightCubeHorizontalRotation 5s
-    var(--cube-animation-timing-function) infinite;
+  animation: topBackRightCubeRotation 5s var(--cube-animation-timing-function)
+    infinite;
 }
 
 .scene__cube--top-back-right .scene__cube-ball {
-  animation: topBackRightCubeBallHorizontalRotation 5s
+  animation: topBackRightCubeBallRotation 5s
     var(--cube-animation-timing-function) infinite;
 }
 
-@keyframes topFrontRightCubeHorizontalRotation {
+@keyframes topFrontRightCubeRotation {
   to {
     transform: rotateZ(360deg);
   }
 }
 
-@keyframes topFrontRightCubeBallHorizontalRotation {
+@keyframes topFrontRightCubeBallRotation {
   to {
     transform: rotateY(90deg) rotateX(325deg);
   }
 }
 
-@keyframes topFrontLeftCubeHorizontalRotation {
+@keyframes topFrontLeftCubeRotation {
   to {
     transform: rotateZ(450deg);
   }
 }
 
-@keyframes topFrontLeftCubeBallHorizontalRotation {
+@keyframes topFrontLeftCubeBallRotation {
   to {
     transform: rotateY(90deg) rotateX(405deg);
   }
 }
 
-@keyframes topBackLeftCubeHorizontalRotation {
+@keyframes topBackLeftCubeRotation {
   to {
     transform: rotateZ(540deg);
   }
 }
 
-@keyframes topBackLeftCubeBallHorizontalRotation {
+@keyframes topBackLeftCubeBallRotation {
   to {
     transform: rotateY(90deg) rotateX(495deg);
   }
 }
 
-@keyframes topBackRightCubeHorizontalRotation {
+@keyframes topBackRightCubeRotation {
   to {
     transform: rotateZ(630deg);
   }
 }
 
-@keyframes topBackRightCubeBallHorizontalRotation {
+@keyframes topBackRightCubeBallRotation {
   to {
     transform: rotateY(90deg) rotateX(585deg);
   }
