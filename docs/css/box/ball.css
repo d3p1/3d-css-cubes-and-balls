@@ -1,0 +1,17 @@
+/**
+ * @description Box ball styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__cube-ball {
+  width: var(--cube-side);
+  height: var(--cube-side);
+  border-radius: 50%;
+}
+
+.scene__cube:nth-child(even) .scene__cube-ball {
+  background-color: hsl(192, 59%, 53%);
+}
+
+.scene__cube:nth-child(odd) .scene__cube-ball {
+  background-color: hsl(52, 85%, 57%);
+}

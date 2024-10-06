@@ -1,0 +1,71 @@
+/**
+ * @description Box styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+@import url('box/cube.css');
+@import url('box/ball.css');
+@import url('box/animation.css');
+
+.scene__cube {
+  transform-origin: 0 0 calc((var(--cube-side) + var(--cube-border-size)) / -2);
+}
+
+.scene__cube--top-front-right .scene__cube-ball {
+  transform: rotateY(90deg) rotateX(-45deg);
+}
+
+.scene__cube--top-front-left {
+  transform: rotateZ(90deg);
+}
+
+.scene__cube--top-front-left .scene__cube-ball {
+  transform: rotateY(90deg) rotateX(45deg);
+}
+
+.scene__cube--top-back-left {
+  transform: rotateZ(180deg);
+}
+
+.scene__cube--top-back-left .scene__cube-ball {
+  transform: rotateY(90deg) rotateX(135deg);
+}
+
+.scene__cube--top-back-right {
+  transform: rotateZ(270deg);
+}
+
+.scene__cube--top-back-right .scene__cube-ball {
+  transform: rotateY(90deg) rotateX(225deg);
+}
+
+.scene__cube--bottom-front-left {
+  transform: rotateZ(90deg) rotateY(90deg);
+}
+
+.scene__cube--bottom-front-left .scene__cube-ball {
+  transform: rotateX(45deg);
+}
+
+.scene__cube--bottom-back-left {
+  transform: rotateZ(90deg) rotateY(180deg);
+}
+
+.scene__cube--bottom-back-left .scene__cube-ball {
+  transform: rotateY(90deg) rotateX(-45deg);
+}
+
+.scene__cube--bottom-back-right {
+  transform: rotateX(-180deg);
+}
+
+.scene__cube--bottom-back-right .scene__cube-ball {
+  transform: rotateY(90deg) rotateX(45deg);
+}
+
+.scene__cube--bottom-front-right {
+  transform: rotateX(-90deg);
+}
+
+.scene__cube--bottom-front-right .scene__cube-ball {
+  transform: rotateY(45deg);
+}

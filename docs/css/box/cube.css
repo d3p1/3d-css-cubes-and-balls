@@ -1,0 +1,42 @@
+/**
+ * @description Box cube styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__cube {
+  --cube-side: 10em;
+  --cube-border-color: hsl(292, 59%, 53%);
+  --cube-border-size: 0.3em;
+  --cube-side-translation: calc(
+    (var(--cube-side) / 2) + var(--cube-border-size)
+  );
+}
+
+.scene__cube {
+  position: absolute;
+  width: var(--cube-side);
+  height: var(--cube-side);
+}
+
+.scene__cube-side {
+  position: absolute;
+  width: var(--cube-side);
+  height: var(--cube-side);
+  background: transparent;
+  border: var(--cube-border-size) solid var(--cube-border-color);
+}
+
+.scene__cube-side--front {
+  transform: rotateY(90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--back {
+  transform: rotateY(-90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--left {
+  transform: rotateX(-90deg) translateZ(var(--cube-side-translation));
+}
+
+.scene__cube-side--right {
+  transform: rotateX(90deg) translateZ(var(--cube-side-translation));
+}

@@ -1,0 +1,128 @@
+/**
+ * @description Box animation styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__cube {
+  --cube-animation-timing-function: linear(
+    0 0%,
+    0.22 2.1%,
+    0.86 6.5%,
+    1.11 8.6%,
+    1.3 10.7%,
+    1.35 11.8%,
+    1.37 12.9%,
+    1.37 13.7%,
+    1.36 14.5%,
+    1.32 16.2%,
+    1.03 21.8%,
+    0.94 24%,
+    0.89 25.9%,
+    0.88 26.85%,
+    0.87 27.8%,
+    0.87 29.25%,
+    0.88 30.7%,
+    0.91 32.4%,
+    0.98 36.4%,
+    1.01 38.3%,
+    1.04 40.5%,
+    1.05 42.7%,
+    1.05 44.1%,
+    1.04 45.7%,
+    1 53.3%,
+    0.99 55.4%,
+    0.98 57.5%,
+    0.99 60.7%,
+    1 68.1%,
+    1.01 72.2%,
+    1 86.7%,
+    1 100%
+  );
+}
+
+.scene__cube--top-front-right {
+  animation: topFrontRightCubeHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-front-right .scene__cube-ball {
+  animation: topFrontRightCubeBallHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-front-left {
+  animation: topFrontLeftCubeHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-front-left .scene__cube-ball {
+  animation: topFrontLeftCubeBallHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-back-left {
+  animation: topBackLeftCubeHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-back-left .scene__cube-ball {
+  animation: topBackLeftCubeBallHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-back-right {
+  animation: topBackRightCubeHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+.scene__cube--top-back-right .scene__cube-ball {
+  animation: topBackRightCubeBallHorizontalRotation 5s
+    var(--cube-animation-timing-function) infinite;
+}
+
+@keyframes topFrontRightCubeHorizontalRotation {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes topFrontRightCubeBallHorizontalRotation {
+  to {
+    transform: rotateY(90deg) rotateX(325deg);
+  }
+}
+
+@keyframes topFrontLeftCubeHorizontalRotation {
+  to {
+    transform: rotateZ(450deg);
+  }
+}
+
+@keyframes topFrontLeftCubeBallHorizontalRotation {
+  to {
+    transform: rotateY(90deg) rotateX(405deg);
+  }
+}
+
+@keyframes topBackLeftCubeHorizontalRotation {
+  to {
+    transform: rotateZ(540deg);
+  }
+}
+
+@keyframes topBackLeftCubeBallHorizontalRotation {
+  to {
+    transform: rotateY(90deg) rotateX(495deg);
+  }
+}
+
+@keyframes topBackRightCubeHorizontalRotation {
+  to {
+    transform: rotateZ(630deg);
+  }
+}
+
+@keyframes topBackRightCubeBallHorizontalRotation {
+  to {
+    transform: rotateY(90deg) rotateX(585deg);
+  }
+}
