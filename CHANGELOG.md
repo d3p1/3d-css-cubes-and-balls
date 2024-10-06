@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/d3p1/3d-css-cubes-and-balls/compare/v1.2.0...v1.3.0) (2024-10-06)
+
+
+### Features
+
+* improve cube animation [[#2](https://github.com/d3p1/3d-css-cubes-and-balls/issues/2)] ([e7ae095](https://github.com/d3p1/3d-css-cubes-and-balls/commit/e7ae095d5ad0ceb13ab5a61e020912ee881fffd8))
+
 # [1.2.0](https://github.com/d3p1/3d-css-cubes-and-balls/compare/v1.1.0...v1.2.0) (2024-09-17)
 
 
